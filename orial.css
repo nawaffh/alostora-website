@@ -1384,7 +1384,15 @@ footer{
 
 
     .feature-card{
-    width:100%;
+      width:100%;
+    height:auto;
+    min-height:100px;
+    padding:15px;
+    gap:15px;
+}
+
+.feature-card p{
+    white-space:normal;
 }
 
 .about-image img{
@@ -1442,7 +1450,8 @@ font-size: 24px;
 #stats{
     grid-template-columns:1fr;
     gap:20px;
-      margin:50px auto 120px auto;
+       margin:40px auto;
+    width:95%;
       margin-top:40px;
         grid-template-columns:
             repeat(2,1fr);
