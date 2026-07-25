@@ -42,7 +42,7 @@ header{
     top:0;
     left:0;
     z-index:1000;
-    background:rgba(17,17,17,.9);
+  
      border-bottom:1px solid rgba(138,125,44,.25);
      
     background:rgba(10,10,10,.75);
@@ -110,7 +110,7 @@ header{
 .nav-links a{
     color:white;
     transition:.3s;
-        transition: .3s;
+       
 }
 
 .nav-links a::after{
@@ -150,7 +150,7 @@ header{
     font-size:250px;
     text-align:center;
    
-        transform: translateX(px);
+      
 }
 
 .hero-right img{
@@ -179,14 +179,8 @@ header{
 
 .hero-left{
     display:flex;
-    flex-direction:column;
     gap:20px;
-
-     display:flex;
     flex-direction:column;
-    gap:20px;
-
-  
 
       transform: translateX(-50px) translateY(-80px);
 }
@@ -202,7 +196,7 @@ header{
 .hero-center{
 
     text-align:center;
-    transform:none;
+    
     
     transform: translateY(-40px)translateX(40px) ;
    
@@ -347,7 +341,7 @@ body{
     
 
   
-    height:120px;
+   
 
     
 
@@ -1387,6 +1381,27 @@ footer{
 }
 
 @media(max-width:768px){
+
+
+    .feature-card{
+    width:100%;
+}
+
+.about-image img{
+    width:100%;
+}
+
+    .contact-container{
+    grid-template-columns:1fr;
+}
+
+.testimonials-grid{
+    grid-template-columns:1fr;
+}
+
+    .cards{
+    grid-template-columns:1fr;
+}
 
 #hero{
     display:block ;
