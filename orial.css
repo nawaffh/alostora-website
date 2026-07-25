@@ -1249,6 +1249,9 @@ footer{
 
         .about-container{
             flex-direction:column;
+              display: flex;
+    
+    text-align: center;
         }
 
        
@@ -1389,6 +1392,8 @@ footer{
     min-height:100px;
     padding:15px;
     gap:15px;
+      max-width: 350px;
+    margin: 15px auto;
 }
 
 .feature-card p{
@@ -1397,6 +1402,8 @@ footer{
 
 .about-image img{
     width:100%;
+        width: 100%;
+    max-width: 350px;
 }
 
     .contact-container{
@@ -1409,10 +1416,17 @@ footer{
 
     .cards{
     grid-template-columns:1fr;
+    display: grid;
+    gap: 20px;
+      width: 100%;
 }
 
 #hero{
     display:block ;
+     flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 120px 20px 60px;
 }
 
     
@@ -1503,6 +1517,8 @@ h2{
 .hero-left{
     order:3;
     transform:none;
+    width: 100%;
+    align-items: center;
 }
 
 .hero-center{
@@ -1519,7 +1535,7 @@ h2{
 }
 
 .hero-right img{
-    width:200px;
+    width:220px;
     max-width:100%;
 }
 
