@@ -91,6 +91,12 @@ header{
     color:#111;
 }
 
+.languages button.active{
+    background:#8A7D2C;
+    color:#111;
+    border-color:#8A7D2C;
+}
+
 .nav-links{
     display:flex;
     
@@ -1346,23 +1352,18 @@ footer{
         transition:1s;
     }
 
-    .show{
+  .show{
+    opacity:1;
+    transform:translateY(0);
+}
 
-        opacity:1;
+.hidden{
+    opacity:1;
+    transform:translateY(0);
+    transition:all 1s ease;
+}
 
-        transform:translateY(0);
-    }
-
-    .hidden{
-        opacity:0;
-        transform:translateY(50px);
-        transition:all 1s ease;
-    }
-
-    .show{
-        opacity:1;
-        transform:translateY(0);
-    }
+   
 
 }
 
@@ -1384,44 +1385,213 @@ footer{
     cursor:pointer;
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
-html,
-body{
-    overflow-x:hidden;
+
+    .feature-card{
+      width:100%;
+    height:auto;
+    min-height:100px;
+    padding:15px;
+    gap:15px;
+    margin: 15px auto;
+    max-width:350px;
 }
+
+.feature-card p{
+    white-space:normal;
+}
+
+.about-image img{
+        width: 100%;
+    max-width: 350px;
+}
+
+    .contact-container{
+    grid-template-columns:1fr;
+}
+
+.testimonials-grid{
+    grid-template-columns:1fr;
+}
+
+    .cards{
+    grid-template-columns:1fr;
+    display: grid;
+    gap: 20px;
+      width: 100%;
+}
+
+#hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:20px;
+    padding:100px 20px 40px;
+}
+
+    
+.services-grid{
+    grid-template-columns:1fr;
+}
+
+
+
 
 body{
     font-size:14px;
 }
 
-/* ================= Navbar ================= */
+.hero-content h1{
 
-.navbar{
+
+font-size: 28px;
+
+}
+
+
+.stat-box{
+    flex-direction:column;
+    gap:10px;
+}
+
+
+#stats{
+    gap:20px;
+       margin:40px auto;
+    width:95%;
+      margin-top:40px;
+        grid-template-columns:
+            repeat(2,1fr);
+      
+}
+
+.services-grid,
+#stats{
+    width:95%;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+
+.stat-card,
+.service-card{
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:30px;
+}
+
+h2{
+    font-size:24px;
+}
+
+.service-card h3{
+    font-size:22px;
+}
+
+.service-card p{
+    font-size:12px;
+
+}
+
+
+    .service-card{
+  padding:25px;
+    text-align:center;
+
+}
+
+.stat-card{
+    min-height:auto;
+    padding:25px;
+}
+
+.hero-left{
+    order:3;
+    transform:none;
+    width: 100%;
+    align-items: center;
+}
+
+.hero-center{
+    order:1;
+    transform:none;
+}
+.hero-center h1{
+    font-size:32px;
+    white-space:normal;
+}
+
+.hero-right{
+    order:2;
+    transform: none;
+}
+
+.hero-right img{
+    width:220px;
+    max-width:100%;
+    display:block;
+    margin:auto;
+}
+
+
+
+
+
+.service-card img{
+    width:60px;
+    height:60px;
+    margin:0 auto 15px;
+}
+
+.service-card h3{
+    font-size:28px;
+}
+
+.service-card p{
+   font-size:18px;
+    line-height:1.8;
+}
+
+.section-title h2{
+ font-size:30px;
+
+}
+.section-title p{
+    font-size:16px;
+}
+
+
+
+    .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 20px;
-}
-
-.logo{
-    font-size:28px;
+      padding:15px 20px;
 }
 
 .languages{
     display:none;
 }
 
-.menu-btn{
-    display:block;
-    color:#fff;
-    font-size:32px;
-    cursor:pointer;
+.logo{
+    font-size:28px;
 }
 
-.nav-links{
+.menu-btn{
+    font-size:32px;
+    color:white;
+      display:block;
+}
+
+    
+
+  .nav-links{
     display:none;
-    flex-direction:column;
     position:absolute;
     top:70px;
     right:0;
@@ -1430,167 +1600,16 @@ body{
     padding:20px 0;
 }
 
-.nav-links.show-menu{
-    display:flex;
-}
-
 .nav-links li{
+    list-style:none;
     margin:15px 0;
     text-align:center;
 }
-
-/* ================= Hero ================= */
-
-#hero{
-    display:flex;
+    .nav-links.show-menu{
+        display:flex;
+    }
+    .nav-links{
     flex-direction:column;
-    align-items:center;
-    text-align:center;
-    gap:35px;
-    padding:120px 20px 60px;
-}
-
-.hero-left{
-    order:3;
-    width:100%;
-    align-items:center;
-}
-
-.hero-center{
-    order:1;
-    transform:none;
-}
-
-.hero-right{
-    order:2;
-}
-
-.hero-center h1{
-    font-size:38px;
-    line-height:1.4;
-    white-space:normal;
-}
-
-.hero-center p{
-    font-size:18px;
-}
-
-.hero-right img{
-    width:220px;
-    max-width:100%;
-}
-
-.hero-buttons{
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-/* ================= Feature Cards ================= */
-
-.feature-card{
-    width:100%;
-    max-width:350px;
-    margin:15px auto;
-    padding:18px;
-    height:auto;
-}
-
-.feature-card p{
-    white-space:normal;
-}
-
-/* ================= Stats ================= */
-
-#stats{
-    width:95%;
-    margin:40px auto;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.stat-box{
-    flex-direction:column;
-    text-align:center;
-    gap:10px;
-}
-
-/* ================= Titles ================= */
-
-h2{
-    font-size:30px;
-}
-
-.section-title h2{
-    font-size:30px;
-}
-
-.section-title p{
-    font-size:16px;
-}
-
-/* ================= Why Us ================= */
-
-.cards{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:20px;
-}
-
-.card{
-    width:100%;
-}
-
-/* ================= About ================= */
-
-.about-container{
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-    gap:30px;
-}
-
-.about-image img{
-    width:100%;
-    max-width:350px;
-}
-
-/* ================= Services ================= */
-
-.services-grid{
-    grid-template-columns:1fr;
-}
-
-.service-card{
-    text-align:center;
-    padding:25px;
-}
-
-.service-card h3{
-    font-size:24px;
-}
-
-.service-card p{
-    font-size:16px;
-    line-height:1.8;
-}
-
-/* ================= Portfolio ================= */
-
-.portfolio-grid{
-    grid-template-columns:1fr;
-}
-
-/* ================= Testimonials ================= */
-
-.testimonials-grid{
-    grid-template-columns:1fr;
-}
-
-/* ================= Contact ================= */
-
-.contact-container{
-    grid-template-columns:1fr;
 }
 
 }
@@ -1601,4 +1620,14 @@ h2{
 html,
 body{
     overflow-x:hidden;
+}
+#about,
+#services,
+#portfolio,
+#testimonials,
+#contact{
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
 }
