@@ -150,13 +150,12 @@ header{
     font-size:250px;
     text-align:center;
    
-        transform:none;
+        transform: translateX(px);
 }
 
 .hero-right img{
     width: 650px ;
     max-width:none;
-
     
     
 }
@@ -189,7 +188,7 @@ header{
 
   
 
-      transform:none;
+      transform: translateX(-50px) translateY(-80px);
 }
 
 .hero-left,
@@ -205,7 +204,7 @@ header{
     text-align:center;
     transform:none;
     
-    transform:none;
+    transform: translateY(-40px)translateX(40px) ;
    
     
 
@@ -1481,10 +1480,20 @@ h2{
     order:1;
     transform:none;
 }
+.hero-center h1{
+    font-size:32px;
+    white-space:normal;
+}
 
 .hero-right{
     order:2;
 }
+
+.hero-right img{
+    width:250px;
+    max-width:100%;
+}
+
 
 
 .service-card img{
