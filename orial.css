@@ -1390,6 +1390,26 @@ footer{
     grid-template-columns:1fr;
 }
 
+
+
+body{
+    font-size:14px;
+}
+
+.hero-content h1{
+
+
+font-size: 28px;
+
+}
+
+
+.section-title h2 {
+
+font-size: 24px;
+
+
+}
 .stat-box{
     flex-direction:column;
     gap:10px;
@@ -1432,7 +1452,8 @@ h2{
 }
 
 .service-card p{
-    font-size:16px;
+    font-size:12px;
+
 }
 
 
