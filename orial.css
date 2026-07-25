@@ -4,6 +4,10 @@
     box-sizing:border-box;
 }
 
+html,body{
+    overflow-x:hidden;
+}
+
 body{
     font-family:Cairo,sans-serif;
     background:#111111;
@@ -1390,9 +1394,7 @@ footer{
     grid-template-columns:1fr;
 }
 
-html,body{
-    overflow-x:hidden;
-}
+
 
 
 body{
