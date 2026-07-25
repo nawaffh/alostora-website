@@ -150,12 +150,13 @@ header{
     font-size:250px;
     text-align:center;
    
-        transform: translateX(px);
+        transform:none;
 }
 
 .hero-right img{
     width: 650px ;
     max-width:none;
+
     
     
 }
@@ -188,7 +189,7 @@ header{
 
   
 
-      transform: translateX(-50px) translateY(-80px);
+      transform:none;
 }
 
 .hero-left,
@@ -204,7 +205,7 @@ header{
     text-align:center;
     transform:none;
     
-    transform: translateY(-40px)translateX(40px) ;
+    transform:none;
    
     
 
