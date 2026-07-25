@@ -1388,6 +1388,11 @@ footer{
 
 @media(max-width:768px){
 
+#hero{
+    display:block ;
+}
+
+    
 .services-grid{
     grid-template-columns:1fr;
 }
@@ -1490,9 +1495,16 @@ h2{
 }
 
 .hero-right img{
-    width:250px;
+    width:200px;
     max-width:100%;
 }
+
+.hero-left,
+.hero-center,
+.hero-right{
+    transform:none ;
+}
+
 
 
 
