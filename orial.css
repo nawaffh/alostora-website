@@ -4,9 +4,7 @@
     box-sizing:border-box;
 }
 
-html,body{
-    overflow-x:hidden;
-}
+
 
 body{
     font-family:Cairo,sans-serif;
@@ -1563,3 +1561,10 @@ h2{
 
 }
 
+
+
+
+html,
+body{
+    overflow-x:hidden;
+}
