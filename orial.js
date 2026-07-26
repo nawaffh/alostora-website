@@ -361,3 +361,121 @@ langButtons.forEach(btn => {
     });
 
 });
+topBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+});
+
+
+window.addEventListener("scroll",()=>{
+
+    let scrollTop =
+    window.scrollY;
+
+    let docHeight =
+    document.documentElement.scrollHeight -
+    window.innerHeight;
+
+    let progress =
+    (scrollTop / docHeight) * 100;
+
+    document.getElementById("progress-bar")
+    .style.width =
+    progress + "%";
+
+});
+
+
+    const hiddenElements =
+document.querySelectorAll(".hidden");
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+hiddenElements.forEach((el)=>{
+observer.observe(el);
+});
+
+const text = "نصنع المستقبل الرقمي";
+
+const typing =
+document.getElementById("typing");
+
+let i = 0;
+
+function typeWriter(){
+
+    if(i < text.length){
+
+        typing.innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,100);
+
+    }
+
+}
+
+const parallax = document.querySelector(".parallax");
+
+document.addEventListener("mousemove",(e)=>{
+
+let x = (e.clientX - window.innerWidth/2) / 50;
+let y = (e.clientY - window.innerHeight/2) / 50;
+
+parallax.style.transform =
+`translate(${x}px, ${y}px)`;
+
+});
+
+
+
+emailjs.init("iu_nlW7ZDZrr1gR3M");
+
+const contactForm =
+document.getElementById("contactForm");
+
+contactForm.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_nawaf",
+        "template_qrovbir",
+        this
+    )
+
+    .then(function(){
+
+        alert("✅ تم إرسال رسالتك بنجاح");
+
+        contactForm.reset();
+
+    })
+
+
+
+});

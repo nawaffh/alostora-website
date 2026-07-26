@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="orial.css">
 </head>
 <body>
-
+<div id="progress-bar"></div>
 
 <div id="loader">
     <h1>الأسطورة</h1>
@@ -19,7 +19,7 @@
 
 <header  id="header">
     <nav class="navbar">
-        <div class="logo">الأسطورة</div>
+        <div class="logo">ORIAL</div>
 <div class="menu-btn">☰</div>
 
         <ul class="nav-links">
@@ -33,6 +33,7 @@
         </ul>
 
         <div class="languages">
+            <button id="themeBtn" class="theme-btn">☀️</button>
             <button data-lang="ar" class="active">AR</button>
             <button data-lang="en">EN</button>
             <button data-lang="fr">FR</button>
@@ -47,7 +48,7 @@
     <img src="images/team.png" alt="">
 </div>
         
-        <div class="hero-right">
+        <div class="hero-right ">
 
 
    
@@ -59,30 +60,39 @@
     <img src="images/icon1.png" class="card-icon">
 
     <div class="card-content">
-        <h3 data-i18n="feature_title">إبداع</h3>
-        <p data-i18n="feature_desc">حلول مبتكرة لكل مشروع.</p>
+        <h3 data-i18n="feature_title">روئيتنا</h3>
+        <p data-i18n="feature_desc">ان تكون اوريال التجارية نموذجا للتميز والريادة
+        </p> <br><p data-i18n="feature_desc"> في قطاع التجارة والاستثمار</p>
     </div>
 
 </div>
 
-<div class="feature-card">
+<div class="feature-card parallax">
 
     <img src="images/icon1.png" class="card-icon">
 
     <div class="card-content">
-        <h3 data-i18n="feature_title">إبداع</h3>
-        <p data-i18n="feature_desc">حلول مبتكرة لكل مشروع.</p>
+        <h3 data-i18n="feature_title">رسالتنا</h3>
+        <p data-i18n="feature_desc">تقديم خدمات وحلول تجارية مبتكرة تلبي احتياجات عملائنا </p>
+        <br>
+        <p data-i18n="feature_desc" >
+وتحقق اعلى مستويات الجودة والكفاءة
+        </p>
     </div>
 
 </div>
 
- <div class="feature-card">
+ <div class="feature-card parallax">
 
-    <img src="images/icon1.png" class="card-icon">
+    <img src="images/جوهرة.png" class="card-icon">
 
     <div class="card-content">
-        <h3 data-i18n="feature_title">إبداع</h3>
-        <p data-i18n="feature_desc">حلول مبتكرة لكل مشروع.</p>
+        <h3 data-i18n="feature_title">قيمنا </h3>
+         <p data-i18n="feature_desc">الجودة الاحترافية والثقة العالية .</p>
+        <br>
+        <p data-i18n="feature_desc" >
+
+        </p>
     </div>
 
 </div>
@@ -91,12 +101,12 @@
 
     <div class="hero-center">
 
-  <h1>
+  <h1 id="typing">
     
-  <span data-i18n="hero_title_1">نصنع المستقبل</span>
+  <span data-i18n="hero_title_1">شركة اوريال</span>
  
  <br>
- <span data-i18n="hero_title_2">الرقمي</span>
+ <span data-i18n="hero_title_2">التجارية</span>
 </h1>
 
         <p data-i18n="hero_desc">
@@ -168,7 +178,7 @@
 
     <div class="card-icon">⭐</div>
 
-    <h3 data-i18n="feature_title">إبداع</h3>
+    <h3 data-i18n="feature_title"></h3>
 
     <p data-i18n="feature_desc">حلول مبتكرة لكل مشروع.</p>
 
@@ -199,7 +209,7 @@
 </section>
 
 
-<section id="about"  class="hidden">
+<section id="about" class="hidden" >
     <div class="about-container">
 <div class="about-features">
 
@@ -238,7 +248,7 @@
 </div>
 </section>
 
-<section id="services"  class="hidden">
+<section id="services"  class="hidden" >
 
     <div class="section-title">
         <span class="service-number">01</span>
@@ -456,7 +466,7 @@
 
 </section>
 
-<section id="contact"  class="hidden">
+<section id="contact" class="hidden" >
    <div class="contact-container">
 
     <div class="contact-info">
@@ -487,19 +497,22 @@
 
     </div>
 
-    <form class="contact-form">
+<form class="contact-form" id="contactForm">
 <h3 data-i18n="contact_form_title">أرسل رسالتك</h3>
-        <input type="text" placeholder="الاسم" data-i18n-placeholder="placeholder_name">
+        <input type="text" placeholder="الاسم" name="name"  data-i18n-placeholder="placeholder_name">
 
-        <input type="email" placeholder="البريد الإلكتروني" data-i18n-placeholder="placeholder_email">
+        <input type="email" name="email" placeholder="البريد الإلكتروني" data-i18n-placeholder="placeholder_email">
 
-        <textarea placeholder="رسالتك" data-i18n-placeholder="placeholder_message"></textarea>
+        <textarea placeholder="رسالتك" name="message" data-i18n-placeholder="placeholder_message"></textarea>
 
         <button type="submit" data-i18n="btn_send">
             إرسال
         </button>
 
     </form>
+    <div id="successMessage" class="success-message">
+    ✅ تم إرسال رسالتك بنجاح
+</div>
 
 </div>
 </section>
@@ -538,7 +551,8 @@
 </footer>
     <button id="topBtn">⬆</button>
 
-  
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="orial.js"></script> 
+    
 </body>
 </html>
