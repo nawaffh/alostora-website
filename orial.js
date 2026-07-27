@@ -199,125 +199,93 @@ revealElements.forEach(section => revealObserver.observe(section));
 
 // ترجمة محتوى الموقع (عربي / إنجليزي / فرنسي)
 const translations = {
+  // Navbar
+  nav_home: { ar: "الرئيسية", en: "Home", fr: "Accueil" },
+  nav_about: { ar: "من نحن", en: "About Us", fr: "À propos" },
+  nav_services: { ar: "الخدمات", en: "Services", fr: "Services" },
+  nav_portfolio: { ar: "الأعمال", en: "Portfolio", fr: "Portfolio" },
+  nav_testimonials: { ar: "آراء العملاء", en: "Testimonials", fr: "Témoignages" },
+  nav_contact: { ar: "تواصل معنا", en: "Contact Us", fr: "Contactez-nous" },
 
-    nav_home:        { ar: "الرئيسية",        en: "Home",              fr: "Accueil" },
-    nav_about:        { ar: "من نحن",           en: "About Us",          fr: "À propos" },
-    nav_services:     { ar: "الخدمات",          en: "Services",         fr: "Services" },
-    nav_portfolio:    { ar: "الأعمال",          en: "Portfolio",        fr: "Portfolio" },
-    nav_testimonials: { ar: "آراء العملاء",     en: "Testimonials",     fr: "Témoignages" },
-    nav_contact:      { ar: "تواصل معنا",       en: "Contact Us",       fr: "Contactez-nous" },
+  // Hero
+  hero_title_1: { ar: "شركة أوريال", en: "Orial Company", fr: "Société Orial" },
+  hero_title_2: { ar: "التجارية", en: "Trading", fr: "Commerciale" },
+  hero_desc: { ar: "حلول متكاملة للشركات والأفراد تجمع بين الإبداع والتقنية.", en: "Integrated solutions for companies and individuals combining creativity and technology.", fr: "Des solutions intégrées pour les entreprises et les particuliers, alliant créativité et technologie." },
+  hero_btn_services: { ar: "خدماتنا", en: "Our Services", fr: "Nos Services" },
+  hero_btn_portfolio: { ar: "أعمالنا", en: "Our Work", fr: "Nos Réalisations" },
 
-    hero_title_1: { ar: "نصنع المستقبل", en: "We Build The",        fr: "Nous construisons" },
-    hero_title_2: { ar: "الرقمي",        en: "Digital Future",      fr: "l'avenir numérique" },
-    hero_desc: {
-        ar: "حلول متكاملة للشركات والأفراد تجمع بين الإبداع والتقنية.",
-        en: "Comprehensive solutions for companies and individuals that combine creativity and technology.",
-        fr: "Des solutions complètes pour les entreprises et les particuliers, alliant créativité et technologie."
-    },
-    hero_btn_services: { ar: "خدماتنا", en: "Our Services", fr: "Nos services" },
-    hero_btn_portfolio: { ar: "أعمالنا", en: "Our Work", fr: "Nos réalisations" },
+  // Vision / Mission / Values
+  vision_title: { ar: "رؤيتنا", en: "Our Vision", fr: "Notre Vision" },
+  vision_desc1: { ar: "أن تكون أوريال التجارية نموذجاً للتميز والريادة", en: "To be a model of excellence and leadership", fr: "Être un modèle d'excellence et de leadership" },
+  vision_desc2: { ar: "في قطاع التجارة والاستثمار", en: "In trade and investment sector", fr: "Dans le secteur du commerce et de l'investissement" },
+  mission_title: { ar: "رسالتنا", en: "Our Mission", fr: "Notre Mission" },
+  mission_desc1: { ar: "تقديم خدمات وحلول تجارية مبتكرة تلبي احتياجات عملائنا", en: "Providing innovative business services and solutions", fr: "Fournir des services et solutions innovants" },
+  mission_desc2: { ar: "وتحقق أعلى مستويات الجودة والكفاءة", en: "Achieving the highest standards of quality and efficiency", fr: "Atteindre les plus hauts niveaux de qualité et d'efficacité" },
+  values_title: { ar: "قيمنا", en: "Our Values", fr: "Nos Valeurs" },
+  values_desc: { ar: "الجودة الاحترافية والثقة العالية", en: "Professional quality and high trust", fr: "Qualité professionnelle et grande confiance" },
 
-    feature_title: { ar: "إبداع", en: "Creativity", fr: "Créativité" },
-    feature_desc: {
-        ar: "حلول مبتكرة لكل مشروع.",
-        en: "Innovative solutions for every project.",
-        fr: "Des solutions innovantes pour chaque projet."
-    },
+  // Stats
+  stat_projects: { ar: "مشروع مكتمل", en: "Completed Projects", fr: "Projets Terminés" },
+  stat_clients: { ar: "عميل سعيد", en: "Happy Clients", fr: "Clients Satisfaits" },
+  stat_experience: { ar: "سنوات خبرة", en: "Years of Experience", fr: "Années d'Expérience" },
+  stat_support: { ar: "دعم مستمر", en: "Continuous Support", fr: "Support Continu" },
 
-    stat_projects:    { ar: "مشروع مكتمل",  en: "Completed Projects",       fr: "Projets terminés" },
-    stat_clients:     { ar: "عميل سعيد",    en: "Happy Clients",            fr: "Clients satisfaits" },
-    stat_experience:  { ar: "سنوات خبرة",   en: "Years of Experience",      fr: "Années d'expérience" },
-    stat_support:     { ar: "دعم مستمر",    en: "Continuous Support",       fr: "Support continu" },
+  // Why Us
+  whyus_title: { ar: "لماذا نحن؟", en: "Why Choose Us?", fr: "Pourquoi Nous Choisir ?" },
+  why_card1_title: { ar: "خبرة واسعة", en: "Wide Experience", fr: "Grande Expérience" },
+  why_card1_desc: { ar: "فريق عمل يمتلك خبرة طويلة في مختلف القطاعات التجارية والاستثمارية", en: "A team with extensive experience across various sectors", fr: "Une équipe possédant une vaste expérience" },
+  why_card2_title: { ar: "الالتزام بالجودة", en: "Commitment To Quality", fr: "Engagement envers la qualité" },
+  why_card2_desc: { ar: "نلتزم بأعلى معايير الجودة والاحترافية في جميع أعمالنا وخدماتنا", en: "We adhere to the highest standards of quality and professionalism", fr: "Nous respectons les normes les plus élevées" },
+  why_card3_title: { ar: "حلول متكاملة", en: "Integrated Solutions", fr: "Solutions Intégrées" },
+  why_card3_desc: { ar: "نقدم حلولاً شاملة تغطي كافة احتياجات عملائنا بكفاءة وجودة عالية", en: "We provide comprehensive solutions for all customer needs", fr: "Nous fournissons des solutions complètes" },
 
-    whyus_title: { ar: "لماذا نحن؟", en: "Why Us?", fr: "Pourquoi nous ?" },
+  // About
+  about_label: { ar: "من نحن", en: "About Us", fr: "À propos" },
+  about_title: { ar: "نبذة عن شركة أوريال", en: "About Orial Company", fr: "À propos d'Orial" },
+  about_feat1: { ar: "✓ جودة عالية", en: "✓ High Quality", fr: "✓ Haute Qualité" },
+  about_feat2: { ar: "✓ فريق محترف", en: "✓ Professional Team", fr: "✓ Équipe Professionnelle" },
+  about_feat3: { ar: "✓ دعم مستمر", en: "✓ Continuous Support", fr: "✓ Support Continu" },
+  about_p1: { ar: "شركة أوريال التجارية (ORIAL) هي شركة سعودية طموحة تعمل في قطاع التجارة والاستثمار، وتسعى إلى تقديم حلول تجارية متكاملة وخدمات نوعية وفق أعلى معايير الجودة والاحترافية. تؤمن أوريال بأن النجاح يُبنى على الثقة والشراكات الاستراتيجية.", en: "Orial Trading Company (ORIAL) is an ambitious Saudi company operating in the trade and investment sector, seeking to provide integrated business solutions and quality services according to the highest standards. Orial believes success is built on trust and strategic partnerships.", fr: "Orial Trading Company (ORIAL) est une entreprise saoudienne ambitieuse opérant dans le secteur du commerce et de l'investissement, cherchant à fournir des solutions commerciales intégrées selon les normes les plus élevées." },
+  about_p2: { ar: "تطمح الشركة إلى أن تكون من الشركات الرائدة في السوق السعودي والإقليمي عبر تبني أفضل الممارسات التجارية، واستثمار الفرص الواعدة، وتقديم قيمة مضافة تسهم في تحقيق النمو المستدام.", en: "The company aspires to be a leading player in the Saudi and regional market by adopting best business practices, investing in promising opportunities, and delivering added value for sustainable growth.", fr: "L'entreprise aspire à être un leader sur le marché saoudien et régional en adoptant les meilleures pratiques commerciales." },
+  about_btn: { ar: "اعرف المزيد", en: "Learn More", fr: "En Savoir Plus" },
 
-    about_label: { ar: "من نحن", en: "About Us", fr: "À propos" },
-    about_title: {
-        ar: "نبني حلولاً رقمية تصنع الفرق",
-        en: "We Build Digital Solutions That Make a Difference",
-        fr: "Nous créons des solutions numériques qui font la différence"
-    },
-    about_p1: {
-        ar: "الأسطورة شركة متخصصة في تقديم حلول رقمية متكاملة، تجمع بين الإبداع والتقنية لمساعدة الشركات والأفراد على تحقيق أهدافهم بكفاءة واحترافية.",
-        en: "Al-Ustora is a company specialized in providing comprehensive digital solutions, combining creativity and technology to help companies and individuals achieve their goals efficiently and professionally.",
-        fr: "Al-Ustora est une entreprise spécialisée dans la fourniture de solutions numériques complètes, alliant créativité et technologie pour aider les entreprises et les particuliers à atteindre leurs objectifs avec efficacité et professionnalisme."
-    },
-    about_p2: {
-        ar: "نؤمن أن النجاح يبدأ بفكرة قوية وتنفيذ احترافي، لذلك نركز على الجودة والابتكار في كل مشروع.",
-        en: "We believe that success starts with a strong idea and professional execution, so we focus on quality and innovation in every project.",
-        fr: "Nous croyons que le succès commence par une idée forte et une exécution professionnelle, c'est pourquoi nous nous concentrons sur la qualité et l'innovation dans chaque projet."
-    },
-    about_btn: { ar: "اعرف المزيد", en: "Learn More", fr: "En savoir plus" },
-    about_feat1: { ar: "✓ جودة عالية",  en: "✓ High Quality",        fr: "✓ Haute qualité" },
-    about_feat2: { ar: "✓ فريق محترف", en: "✓ Professional Team",   fr: "✓ Équipe professionnelle" },
-    about_feat3: { ar: "✓ دعم مستمر",  en: "✓ Continuous Support",  fr: "✓ Support continu" },
+  // Services
+  services_title: { ar: "خدماتنا", en: "Our Services", fr: "Nos Services" },
+  services_desc: { ar: "نقدم حلولاً متكاملة تلبي احتياجات الأفراد والشركات.", en: "We provide integrated solutions for individuals and businesses.", fr: "Nous offrons des solutions intégrées pour les particuliers et les entreprises." },
+  service_card_title: { ar: "تصميم المواقع", en: "Web Design", fr: "Conception de Sites" },
+  service_card_desc: { ar: "مواقع احترافية سريعة ومتجاوبة مع جميع الأجهزة.", en: "Professional, fast, and responsive websites for all devices.", fr: "Sites web professionnels, rapides et adaptés à tous les appareils." },
 
-    services_title: { ar: "خدماتنا", en: "Services", fr: "Nos services" },
-    services_desc: {
-        ar: "نقدم حلولاً متكاملة تلبي احتياجات الأفراد والشركات.",
-        en: "We provide comprehensive solutions that meet the needs of individuals and companies.",
-        fr: "Nous proposons des solutions complètes répondant aux besoins des particuliers et des entreprises."
-    },
-    service_card_title: { ar: "تصميم المواقع", en: "Web Design", fr: "Conception de sites web" },
-    service_card_desc: {
-        ar: "مواقع احترافية سريعة ومتجاوبة مع جميع الأجهزة.",
-        en: "Professional, fast websites responsive on all devices.",
-        fr: "Des sites web professionnels, rapides et adaptés à tous les appareils."
-    },
+  // Portfolio
+  portfolio_title: { ar: "أعمالنا", en: "Our Portfolio", fr: "Notre Portfolio" },
+  portfolio_desc: { ar: "نماذج من المشاريع التي قمنا بتنفيذها.", en: "Examples of projects we have completed.", fr: "Exemples de projets que nous avons réalisés." },
+  filter_all: { ar: "الكل", en: "All", fr: "Tous" },
+  filter_website: { ar: "مواقع", en: "Websites", fr: "Sites Web" },
+  filter_store: { ar: "متاجر", en: "Stores", fr: "Boutiques" },
+  filter_branding: { ar: "هويات", en: "Branding", fr: "Identités" },
+  project_category: { ar: "تصميم مواقع", en: "Web Design", fr: "Conception Web" },
+  project_title: { ar: "موقع شركة", en: "Company Website", fr: "Site d'Entreprise" },
+  project_desc: { ar: "تصميم وتطوير موقع احترافي.", en: "Design and development of a professional website.", fr: "Conception et développement d'un site professionnel." },
 
-    portfolio_title: { ar: "أعمالنا", en: "Our Work", fr: "Nos réalisations" },
-    portfolio_desc: {
-        ar: "نماذج من المشاريع التي قمنا بتنفيذها.",
-        en: "Samples of the projects we have completed.",
-        fr: "Exemples de projets que nous avons réalisés."
-    },
-    filter_all:      { ar: "الكل",   en: "All",       fr: "Tous" },
-    filter_website:  { ar: "مواقع",  en: "Websites",  fr: "Sites web" },
-    filter_store:    { ar: "متاجر",  en: "Stores",    fr: "Boutiques" },
-    filter_branding: { ar: "هويات",  en: "Branding",  fr: "Identités visuelles" },
+  // Testimonials
+  testimonials_title: { ar: "آراء العملاء", en: "Testimonials", fr: "Témoignages" },
+  testimonials_desc: { ar: "ماذا يقول عملاؤنا عن خدماتنا.", en: "What our clients say about our services.", fr: "Ce que disent nos clients de nos services." },
+  client_role: { ar: "رائد أعمال", en: "Entrepreneur", fr: "Entrepreneur" },
+  testimonial_text: { ar: "تعامل احترافي وجودة ممتازة في تنفيذ المشروع.", en: "Professional dealing and excellent quality in project execution.", fr: "Traitement professionnel et excellente qualité dans l'exécution du projet." },
 
-    project_category: { ar: "تصميم مواقع", en: "Web Design", fr: "Conception de sites web" },
-    project_title:    { ar: "موقع شركة",   en: "Company Website", fr: "Site d'entreprise" },
-    project_desc: {
-        ar: "تصميم وتطوير موقع احترافي.",
-        en: "Design and development of a professional website.",
-        fr: "Conception et développement d'un site web professionnel."
-    },
+  // Contact
+  contact_info_title: { ar: "معلومات التواصل", en: "Contact Information", fr: "Informations de Contact" },
+  contact_country: { ar: "المملكة العربية السعودية", en: "Kingdom of Saudi Arabia", fr: "Royaume d'Arabie Saoudite" },
+  contact_form_title: { ar: "أرسل رسالتك", en: "Send Your Message", fr: "Envoyez Votre Message" },
+  placeholder_name: { ar: "الاسم", en: "Name", fr: "Nom" },
+  placeholder_email: { ar: "البريد الإلكتروني", en: "Email", fr: "E-mail" },
+  placeholder_message: { ar: "رسالتك", en: "Your Message", fr: "Votre Message" },
+  btn_send: { ar: "إرسال", en: "Send", fr: "Envoyer" },
 
-    testimonials_title: { ar: "آراء العملاء", en: "Testimonials", fr: "Témoignages" },
-    testimonials_desc: {
-        ar: "ماذا يقول عملاؤنا عن خدماتنا.",
-        en: "What our clients say about our services.",
-        fr: "Ce que disent nos clients de nos services."
-    },
-    client_role: { ar: "رائد أعمال", en: "Entrepreneur", fr: "Entrepreneur" },
-    testimonial_text: {
-        ar: "تعامل احترافي وجودة ممتازة في تنفيذ المشروع.",
-        en: "Professional dealing and excellent quality in project execution.",
-        fr: "Un service professionnel et une excellente qualité dans la réalisation du projet."
-    },
-
-    contact_info_title: { ar: "معلومات التواصل", en: "Contact Information", fr: "Informations de contact" },
-    contact_country: { ar: "المملكة العربية السعودية", en: "Saudi Arabia", fr: "Arabie Saoudite" },
-    contact_form_title: { ar: "أرسل رسالتك", en: "Send Your Message", fr: "Envoyez votre message" },
-    placeholder_name:    { ar: "الاسم",              en: "Name",     fr: "Nom" },
-    placeholder_email:   { ar: "البريد الإلكتروني",  en: "Email",    fr: "E-mail" },
-    placeholder_message: { ar: "رسالتك",             en: "Your Message", fr: "Votre message" },
-    btn_send: { ar: "إرسال", en: "Send", fr: "Envoyer" },
-
-    footer_desc: {
-        ar: "حلول رقمية متكاملة للأفراد والشركات.",
-        en: "Comprehensive digital solutions for individuals and companies.",
-        fr: "Solutions numériques complètes pour les particuliers et les entreprises."
-    },
-    footer_links_title: { ar: "روابط سريعة", en: "Quick Links", fr: "Liens rapides" },
-    footer_contact_title: { ar: "تواصل", en: "Contact", fr: "Contact" },
-    footer_bottom: {
-        ar: "© 2026 جميع الحقوق محفوظة لشركة الأسطورة",
-        en: "© 2026 All rights reserved to Al-Ustora Company",
-        fr: "© 2026 Tous droits réservés à la société Al-Ustora"
-    }
-
+  // Footer
+  footer_desc: { ar: "حلول رقمية متكاملة للأفراد والشركات.", en: "Integrated digital solutions for individuals and businesses.", fr: "Solutions numériques intégrées pour les particuliers et les entreprises." },
+  footer_links_title: { ar: "روابط سريعة", en: "Quick Links", fr: "Liens Rapides" },
+  footer_contact_title: { ar: "تواصل", en: "Contact", fr: "Contact" },
+  footer_bottom: { ar: "© 2026 جميع الحقوق محفوظة لشركة أوريال", en: "© 2026 All Rights Reserved - Orial Company", fr: "© 2026 Tous Droits Réservés - Orial" }
 };
 
 function setLanguage(lang){
@@ -479,3 +447,9 @@ contactForm.addEventListener("submit",function(e){
 
 
 });
+
+
+const savedLang = localStorage.getItem("preferredLang") || "ar";
+setLanguage(savedLang);
+langButtons.forEach(b => b.classList.remove("active"));
+document.querySelector(`.languages button[data-lang="${savedLang}"]`).classList.add("active");
